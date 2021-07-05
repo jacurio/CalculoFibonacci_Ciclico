@@ -1,0 +1,23 @@
+package calculofibonacci_ciclico;
+import java.util.Scanner;
+/**
+ *
+ * @author John
+ */
+public class CalculoFibonacci_Ciclico{
+    public static void main(String[] args) {
+        int num1 = 0;
+        int num2 = 1;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresar el número de elementos para mostrar en la serie: ");
+        int limite = sc.nextInt();
+        System.out.print(num1 + ", ");
+        System.out.print(num2 + ", ");
+        for(int i = 0; i<limite-2; i++)
+        {
+            num2 = num1 + num2;
+            num1 = num2 - num1;
+            System.out.print(num2 + ", ");
+        }
+    }
+}
